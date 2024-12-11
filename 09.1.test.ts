@@ -12,7 +12,6 @@ Deno.test(async function testInput(t) {
     })
     
     await t.step('gets target size', () => {
-        // console.log(originalDisk)
         assertEquals(getFinalSize([0, 0, ".", ".", ".", 1, 1, 1, ".", ".",".", 2, ".", ".", ".", 3, 3, 3, ".", 4,4, ".", 5, 5, 5, 5, ".", 6, 6, 6,6, ".", 7, 7, 7, ".", 8, 8, 8, 8,9, 9]), 28)
     })
 
@@ -33,27 +32,10 @@ Deno.test(async function testInput(t) {
     })
 })
 
-// Deno.test(function modifiedTestInput() {
-//     const disk = new Disk('23331331214141314029436');
-//     const {originalDisk, finalDisk, checkSumValue} = disk;
-//     console.log(getFinalSize(originalDisk))
-//     console.log(finalDisk.length)
-//     console.log({originalDisk, finalDisk, fullCheckSum: checkSumValue})
-//     assert(checkSumValue === 4426)
-// })
-
 Deno.test(function fullInput() {
     const disk = new Disk(fullData);
     const {checkSumValue} = disk;
     console.log({
-        // mapSize: originalMap.length,
-        // middleOfMap: originalMap.slice(8168 * 2 - 7, 8168 * 2 + 5),
-        // originalDiskLength: originalDisk.length,
-        // finalSizePrediction: getFinalSize(originalDisk),
-        // finalDiskSize: finalDisk.length,
-        // endOfFinalDisk: finalDisk.slice(finalDisk.length - 150),
-        // finalDisk,
-        // originalDisk,
         fullCheckSum: checkSumValue,
     })
     assert(checkSumValue > 90167081070)

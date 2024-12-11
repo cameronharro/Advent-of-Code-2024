@@ -44,15 +44,12 @@ export function splitDisk(arr: mixedArray, finalSize: number) {
 export function swapEmptyAndFull (arr: mixedArray) {
     const finalSize = getFinalSize(arr);
     const {targetDisk, sourceDisk} = splitDisk(arr, finalSize)
-    // console.log({targetDisk, sourceDisk})
     let searchFrom = 0;
     while (searchFrom >= 0 && sourceDisk.length > 0) {
         const firstEmpty = targetDisk.indexOf('.', searchFrom);
         if (firstEmpty === -1) {break}
         const nextElement = sourceDisk.pop()
         if (nextElement !== undefined) {targetDisk[firstEmpty] = nextElement}
-
-        // console.log({firstEmpty, nextElement, targetDisk})
         searchFrom = firstEmpty;
     }
     return targetDisk
