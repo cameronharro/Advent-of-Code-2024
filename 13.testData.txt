@@ -1,0 +1,1 @@
+ButtonA:X+94,Y+34ButtonB:X+22,Y+67Prize:X=8400,Y=5400ButtonA:X+26,Y+66ButtonB:X+67,Y+21Prize:X=12748,Y=12176ButtonA:X+17,Y+86ButtonB:X+84,Y+37Prize:X=7870,Y=6450ButtonA:X+69,Y+23ButtonB:X+27,Y+71Prize:X=18641,Y=10279
